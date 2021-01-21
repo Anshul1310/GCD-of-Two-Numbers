@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class gcd
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int firstNumber=scan.nextInt();
+        System.out.println("Enter the Second Number");
+        int secondNumber=scan.nextInt();
+        int gcd=0;
+        for(int i=Math.max(firstNumber,secondNumber)/2;i>1;i--){
+            if(firstNumber%i==0 && secondNumber%i==0){
+                gcd=i;
+                break;
+            }
+        }
+        if(gcd!=0){
+        System.out.println("GCD is "+gcd);
+        }else{
+            System.out.println("No divisor");
+        }
+	}
+}
